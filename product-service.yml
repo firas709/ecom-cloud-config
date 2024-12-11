@@ -2,14 +2,12 @@ server:
   port: 8050
 spring:
   datasource:
-    driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5433/ecommerce_product_catalog
     username: firas
     password: Firas123@
   jpa:
     hibernate:
       ddl-auto: validate
-    database: postgresql
   flyway:
     baseline-on-migrate: true
     enabled: true
