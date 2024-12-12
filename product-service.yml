@@ -2,7 +2,7 @@ server:
   port: 8050
 spring:
   datasource:
-    url: jdbc:postgresql://localhost:5433/ecommerce_product_catalog
+    url: jdbc:postgresql://localhost:5433/ecommerce_product_cataloge
     username: firas
     password: Firas123@
   jpa:
