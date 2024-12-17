@@ -1,0 +1,38 @@
+server:
+  port: 2024
+spring:
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: product-service
+          uri: lb:http://PRODUCT-SERVICE
+          predicates:
+            - Path=/api/products/**   
+        - id: category-service
+          uri: lb:http://PRODUCT-SERVICE
+          predicates:
+            - Path=/api/categories/**
+        - id: auth-service
+          uri: lb:http://USER-SERVICE
+          predicates:
+            - Path=/auth/**
+        - id: forget-service
+          uri: lb:http://USER-SERVICE
+          predicates:
+            - Path=/forget/**
+        - id: user-service
+          uri: lb:http://USER-SERVICE
+          predicates:
+            - Path=/users/**  
+        - id: order-service
+          uri: lb:http://ORDER-SERVICE
+          predicates:
+            - Path=/api/v1/orders/**
+        - id: order-lines-service
+          uri: lb:http://ORDER-SERVICE
+          predicates:
+            - Path=/api/v1/order-lines/**
+
