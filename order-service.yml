@@ -1,0 +1,10 @@
+server:
+  port: 8051
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/ecommerce_order_cataloge
+    username: firas
+    password: Firas123@
+  jpa:
+    hibernate:
+      ddl-auto: update
