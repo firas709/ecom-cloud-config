@@ -19,5 +19,5 @@ spring:
 
 application:
   config:
-    customer-url: http://localhost:8222/api/customers
-    product-url: http://localhost:8222/api/products
+    customer-url: http://localhost:2024/api/customers
+    product-url: http://localhost:2024/api/products
