@@ -8,31 +8,31 @@ spring:
           enabled: true
       routes:
         - id: product-service
-          uri: lb:http://PRODUCT-SERVICE
+          uri: lb:http://product-service
           predicates:
             - Path=/api/products/**   
         - id: category-service
-          uri: lb:http://PRODUCT-SERVICE
+          uri: lb:http://product-service
           predicates:
             - Path=/api/categories/**
         - id: auth-service
-          uri: lb:http://USER-SERVICE
+          uri: lb:http://user-service
           predicates:
             - Path=/auth/**
         - id: forget-service
-          uri: lb:http://USER-SERVICE
+          uri: lb:http://user-service
           predicates:
             - Path=/forget/**
         - id: user-service
-          uri: lb:http://USER-SERVICE
+          uri: lb:http://user-service
           predicates:
             - Path=/users/**  
         - id: order-service
-          uri: lb:http://ORDER-SERVICE
+          uri: lb:http://order-service
           predicates:
             - Path=/api/v1/orders/**
         - id: order-lines-service
-          uri: lb:http://ORDER-SERVICE
+          uri: lb:http://order-service
           predicates:
             - Path=/api/v1/order-lines/**
 
